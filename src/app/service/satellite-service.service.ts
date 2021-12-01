@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Position } from '../bean/Position';
 import { environment } from './../../environments/environment';
 
@@ -10,8 +11,8 @@ export class SatelliteServiceService {
 
   constructor(private http: HttpClient) { }
 
-  getData(data) {
-    let url = environment.serviceip + "iss/satellites?startTime=" + data.startTime;
+  getData(data): Observable<Position[]> {
+    let url = environment.serviceip + "iss/satellites?startTime=" + data;
     return this.http.get<Position[]>(url);
   }
 

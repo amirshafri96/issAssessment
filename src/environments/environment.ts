@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  serviceip:"http://localhost:8082/"
+  serviceip:"http://localhost:8080/"
 };
 
 /*
