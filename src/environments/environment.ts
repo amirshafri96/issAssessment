@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
-  serviceip:"http://localhost:8080/"
+  serviceip:"http://localhost:8080/",
+  mapbox: {
+    accessToken: 'pk.eyJ1IjoiYW1pcnNoYWZyaSIsImEiOiJja3duYXN1aXIyazdoMnRwYWxqODR3NGJkIn0.wPhCcbS-kz3qZK5DJFeGXg'
+  }
 };
 
 /*

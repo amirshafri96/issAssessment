@@ -17,10 +17,12 @@ import {MatNativeDateModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { HttpClientModule } from '@angular/common/http';
+import { MapComponent } from './map/map.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MainPageComponent
+    MainPageComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,

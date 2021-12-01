@@ -1,6 +1,7 @@
-  <div style="margin-left: 5%;margin-top: 5%;"> 
+<div style="margin-left: 5%;margin-top: 5%;">
   <mat-form-field>
-    <input matInput type="datetime-local" placeholder="start date"  [(ngModel)]="userDateTime" >
+    <input matInput type="datetime-local" placeholder="start date" [(ngModel)]="userDateTime">
   </mat-form-field>
   <button mat-raised-button color="primary" (click)="getData()">GO</button>
-  </div>
+</div>
+<div class="map" id="map" style="margin-left: 5%;margin-right: 5%; height:80%"></div>
