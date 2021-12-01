@@ -99,8 +99,10 @@ export class MainPageComponent implements OnInit {
         }
       });
     });
+  }
 
-
+  resetData(){
+    location.reload();
   }
 
 }
