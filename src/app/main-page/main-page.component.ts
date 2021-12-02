@@ -41,12 +41,13 @@ export class MainPageComponent implements OnInit {
     var date = new Date(this.userDateTime);
     let data = date.getTime() / 1000;
     console.log(data);
-    this.satelliteService.getData(data).subscribe(result => {
-      console.log(result);
-      let data = this.processLocation(result);
+    this.getAllData();
+    // this.satelliteService.getData(data).subscribe(result => {
+    //   console.log(result);
+    //   let data = this.processLocation(result);
 
-      this.loadMap(data);
-    })
+    //   this.loadMap(data);
+    // })
   }
 
   processLocation(result: Position[]): any {
@@ -115,4 +116,14 @@ export class MainPageComponent implements OnInit {
 
   }
 
+  getAllData(){
+    var date = new Date(this.userDateTime);
+    let data = date.getTime() / 1000;
+    this.satelliteService.getAllData(data).subscribe(result => {
+      console.log(result.position);
+      let data = this.processLocation(result.position);
+      this.weather = result.forecasts;
+      this.loadMap(data);
+    })
+  }
 }

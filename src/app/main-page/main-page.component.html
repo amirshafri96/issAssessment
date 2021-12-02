@@ -1,24 +1,25 @@
 <div style="margin-left: 5%;margin-top: 5%;">
   <mat-form-field>
     <input matInput type="datetime-local" placeholder="start date" [(ngModel)]="userDateTime">
-  </mat-form-field>
-  <button mat-raised-button color="primary" (click)="getData()">GO</button>
+  </mat-form-field>&nbsp;
+  <button mat-raised-button color="primary" (click)="getData()">GO</button>&nbsp;
   <button mat-raised-button color="warn" (click)="resetData()">RESET</button>
 </div>
 <h2 style="margin-left: 5%;margin-top: 5%;">ISS LOCATION</h2>
 <div class="map" id="map" style="margin-left: 5%;margin-right: 5%; height:50%; width: 40%;"></div>
-<div
-style="background-color: #F0F0F0; width: 45%; padding: 20px; border: 1px solid #CCC; margin-top: 5%; position: absolute; top: 50%; left: 50%;">
+<div style="background-color: #a8dadc; width: 45%; padding: 10px; border: 1px solid #CCC; position: absolute; top: 50%; left: 50%;">
+  <h2>Weather for ISS Location</h2>
   <p *ngIf="weather.length == 0">Searching...</p>
   <div *ngIf="weather.length > 0">
     <table style="width: 100%; text-align: center">
       <thead></thead>
       <tbody>
-        <tr>
-          <td *ngFor="let forecast of weather">
-            <img [src]="forecast.iconLink" />
-            <p>{{ forecast.highTemperature }}C / {{ forecast.highTemperature | fahrenheit }}F</p>
-            <p>{{ forecast.utcTime | moment }}</p>
+        <tr *ngFor="let forecast of weather">
+          <td>
+            <img [src]="forecast.observations.location[0].observation[0].iconLink" />
+            <p>{{ forecast.observations.location[0].observation[0].highTemperature }}C /
+              {{ forecast.observations.location[0].observation[0].highTemperature | fahrenheit }}F</p>
+            <p>{{ forecast.observations.location[0].observation[0].utcTime | moment }}</p>
           </td>
         </tr>
       </tbody>
