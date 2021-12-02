@@ -10,12 +10,15 @@ import { Position } from '../bean/Position';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor(private satelliteService: SatelliteServiceService) { }
+  constructor(private satelliteService: SatelliteServiceService) { 
+    this.weather = [];
+  }
   map: mapboxgl.Map;
   style = 'mapbox://styles/mapbox/streets-v11';
   lat = 37.75;
   lng = -122.41;
   userDateTime: any;
+  public weather: any;
   ngOnInit() {
     // mapboxgl.accessToken = environment.mapbox.accessToken;
     this.map = new mapboxgl.Map({
@@ -104,5 +107,6 @@ export class MainPageComponent implements OnInit {
   resetData(){
     location.reload();
   }
+
 
 }
