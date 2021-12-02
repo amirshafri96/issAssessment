@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
-
+//for view purpose
   private _viewMode: string;
 
   @Input() set viewMode(mode) {
