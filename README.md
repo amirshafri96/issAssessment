@@ -10,6 +10,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 5. run `ng serve --open`. It will automatically open your browser and navigate to `http://localhost:4200/`
 6. In case you just run `ng serve`. Open browser and navigate to `http://localhost:4200/`
 
+## Implemented Extension
+1.Extension A: Visualisation (Front End)
+2.Extension C: Providing more information (Weather)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
