@@ -8,6 +8,8 @@ html {
   z-index: 0;
   margin: 0;
   padding: 0;
+  background-color: #023047;
+  color: white;
 }
 
 #container {

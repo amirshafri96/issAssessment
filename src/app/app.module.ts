@@ -16,10 +16,19 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { HttpClientModule } from '@angular/common/http';
+import { MapComponent } from './map/map.component';
+import { WeatherComponent } from './weather/weather.component';
+import { FahrenheitPipe } from './pipe/fahrenheit.pipe';
+import { MomentPipe } from './pipe/moment.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    MainPageComponent
+    MainPageComponent,
+    MapComponent,
+    WeatherComponent,
+    FahrenheitPipe,
+    MomentPipe
   ],
   imports: [
     BrowserModule,
@@ -35,7 +44,8 @@ import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
     MatNativeDateModule,
     BrowserAnimationsModule,
     NgxMaterialTimepickerModule ,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
