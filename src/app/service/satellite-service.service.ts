@@ -16,5 +16,10 @@ export class SatelliteServiceService {
     return this.http.get<Position[]>(url);
   }
 
+  getAllData(data): Observable<any> {
+    let url = environment.serviceip + "iss/getAllData?startTime=" + data;
+    return this.http.get<any>(url);
+  }
+
 
 }
