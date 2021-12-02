@@ -3,6 +3,7 @@ import { SatelliteServiceService } from '../service/satellite-service.service';
 import * as mapboxgl from 'mapbox-gl';
 import { environment } from 'src/environments/environment';
 import { Position } from '../bean/Position';
+import { WeatherService } from '../service/weather.service';
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
@@ -10,7 +11,9 @@ import { Position } from '../bean/Position';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor(private satelliteService: SatelliteServiceService) { 
+  constructor(
+    private satelliteService: SatelliteServiceService,
+    private weatherService: WeatherService) { 
     this.weather = [];
   }
   map: mapboxgl.Map;
@@ -108,5 +111,8 @@ export class MainPageComponent implements OnInit {
     location.reload();
   }
 
+  getWeather(result: Position[]){
+
+  }
 
 }

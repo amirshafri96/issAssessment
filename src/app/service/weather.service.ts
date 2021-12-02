@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, } from '@angular/common/http';
 import { Position } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -14,5 +14,12 @@ export class WeatherService {
   getData(data): Observable<string> {
     let url = environment.serviceip + "weather/getForecastForCity?cityName=" + data;
     return this.http.get<string>(url);
+  }
+
+  getWeatherByPosition(data): Observable<string>{
+    let url = environment.serviceip + "/weather/getWeatherByPosition";
+    return this.http.get<string>(url, {
+      
+    });
   }
 }
