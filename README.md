@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
 
+## Step to run this project
+1. Download or git clone this project into your local
+2. Open the project using visual studio code
+3. Open the terminal in visual studio code
+4. run `npm install`
+5. run `ng serve --open`. It will automatically open your browser and navigate to `http://localhost:4200/`
+6. In case you just run `ng serve`. Open browser and navigate to `http://localhost:4200/`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
